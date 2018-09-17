@@ -3,17 +3,12 @@ module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2017,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    'ember'
-  ],
-  extends: [
-    'eslint:recommended',
-    'plugin:ember/recommended'
-  ],
+  plugins: ['ember'],
+  extends: ['eslint:recommended', 'plugin:ember/recommended'],
   env: {
-    browser: true
+    browser: true,
   },
   rules: {},
   overrides: [
@@ -25,29 +20,30 @@ module.exports = {
         'ember-cli-build.js',
         'config/**/*.js',
         'tests/dummy/config/**/*.js',
-        'node-tests/blueprints/**/*.js'
+        'node-tests/blueprints/**/*.js',
       ],
-      excludedFiles: [
-        'app/**',
-        'addon/**',
-        'tests/dummy/app/**'
-      ],
+      excludedFiles: ['app/**', 'addon/**', 'tests/dummy/app/**'],
       parserOptions: {
         sourceType: 'script',
-        ecmaVersion: 2015
+        ecmaVersion: 2015,
       },
       env: {
         browser: false,
-        node: true
+        node: true,
       },
       globals: {
-        'describe': true,
-        'it': true
+        describe: true,
+        it: true,
+        beforeEach: true,
       },
       plugins: ['node'],
-      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
-        // add your custom rules and overrides for node files here
-      })
-    }
-  ]
+      rules: Object.assign(
+        {},
+        require('eslint-plugin-node').configs.recommended.rules,
+        {
+          'node/no-unpublished-require': 'off',
+        }
+      ),
+    },
+  ],
 };
