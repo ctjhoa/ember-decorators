@@ -7,16 +7,23 @@
     "packages/*"
   ],
   "scripts": {
-    "lint:js": "lerna run lint:js",
-    "start": "cd packages/-ember-decorators && yarn start",
-    "test": "cd packages/-ember-decorators && yarn test",
-    "node-test": "cd packages/-ember-decorators && yarn node-test",
+    "lint:js": "eslint .",
+    "start": "yarn workspace ember-decorators start",
+    "test": "yarn workspace ember-decorators test",
+    "node-test": "yarn workspace ember-decorators node-test",
     "try": "ember try:one"
   },
   "devDependencies": {
+    "babel-eslint": "^8.1.2",
     "ember-cli": "^3.4.2",
     "ember-source-channel-url": "^1.1.0",
     "ember-try": "pzuraq/ember-try#e9cd69e",
+    "eslint": "^4.19.1",
+    "eslint-plugin-ember": "^5.0.3",
+    "eslint-plugin-node": "^5.2.1",
     "lerna": "^2.10.2"
+  },
+  "engines": {
+    "node": "6.* || >= 7.*"
   }
 }

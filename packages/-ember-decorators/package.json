@@ -17,7 +17,6 @@
   },
   "scripts": {
     "build": "ember build",
-    "lint:js": "eslint .",
     "start": "ember server",
     "test": "ember test",
     "node-test": "mocha node-tests --recursive"
@@ -41,7 +40,6 @@
     "@types/ember-testing-helpers": "0.0.3",
     "@types/qunit": "^2.5.0",
     "@types/rsvp": "^4.0.1",
-    "babel-eslint": "^8.1.2",
     "broccoli-asset-rev": "^2.4.5",
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^3.0.0",
@@ -74,9 +72,6 @@
     "ember-resolver": "^4.0.0",
     "ember-root-url": "^0.2.0",
     "ember-source": "~3.0.0",
-    "eslint": "^4.19.1",
-    "eslint-plugin-ember": "^5.0.0",
-    "eslint-plugin-node": "^5.2.1",
     "fs-extra": "^7.0.0",
     "loader.js": "^4.2.3",
     "mocha": "^4.0.1",

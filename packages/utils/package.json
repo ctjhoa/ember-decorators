@@ -17,7 +17,6 @@
   },
   "scripts": {
     "build": "ember build",
-    "lint:js": "eslint .",
     "start": "echo \"Run serve in the main ember-decorators package\" && false",
     "test": "echo \"Run tests in the main ember-decorators package\" && false"
   },
@@ -33,7 +32,6 @@
     "@types/ember-test-helpers": "^0.7.0",
     "@types/ember-testing-helpers": "^0.0.3",
     "@types/rsvp": "^4.0.1",
-    "babel-eslint": "^8.2.1",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.0.0",
@@ -51,9 +49,6 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",
     "ember-source": "~3.0.0",
-    "eslint": "^4.19.1",
-    "eslint-plugin-ember": "^5.0.0",
-    "eslint-plugin-node": "^5.2.1",
     "loader.js": "^4.2.3"
   },
   "engines": {

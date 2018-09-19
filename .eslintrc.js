@@ -10,19 +10,28 @@ module.exports = {
   env: {
     browser: true,
   },
+  globals: {
+    Ember: true,
+  },
   rules: {},
   overrides: [
     // node files
     {
       files: [
-        'index.js',
-        'testem.js',
-        'ember-cli-build.js',
         'config/**/*.js',
-        'tests/dummy/config/**/*.js',
-        'node-tests/blueprints/**/*.js',
+        'packages/*/index.js',
+        'packages/*/testem.js',
+        'packages/*/ember-cli-build.js',
+        'packages/*/config/**/*.js',
+        'packages/*/tests/dummy/config/**/*.js',
+        'packages/*/blueprints/**/*.js',
+        'packages/*/node-tests/blueprints/**/*.js',
       ],
-      excludedFiles: ['app/**', 'addon/**', 'tests/dummy/app/**'],
+      excludedFiles: [
+        'packages/*/app/**',
+        'packages/*/addon/**',
+        'packages/*/tests/dummy/app/**'
+      ],
       parserOptions: {
         sourceType: 'script',
         ecmaVersion: 2015,
